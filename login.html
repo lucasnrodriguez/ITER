@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="stylesheet" href="login-style.css" />
+    </head>
+
+    <body>
+        <div class="top-header">
+            <div class="contact-top-container">
+                <div class="contact-top-button">
+                    <a href="">
+                        <img
+                            class="contact-img"
+                            src="Símbolos/letter.png"
+                            alt="Correo"
+                            height="15px"
+                        />
+                        <p>info@iterobotica.com</p>
+                    </a>
+                </div>
+                <div class="contact-top-button">
+                    <a href="">
+                        <img
+                            class="contact-img"
+                            src="Símbolos/llamar.png"
+                            alt="Teléfono"
+                            height="15px"
+                        />
+                        <p>+54 9 1123456789</p>
+                    </a>
+                </div>
+                <div class="contact-top-button">
+                    <a href="">
+                        <img
+                            class="contact-img"
+                            src="Símbolos/location.png"
+                            alt="Ubicación"
+                            height="15px"
+                        />
+                        <p>Juncal 253 - Ituzaingó, Buenos Aires</p>
+                    </a>
+                </div>
+            </div>
+            <div class="social-media-container">
+                <div class="social-media-button">
+                    <a href=""
+                        ><img
+                            src="Iconos Redes Sociales/instagram.png"
+                            alt="instagram"
+                            height="15px"
+                    /></a>
+                </div>
+                <div class="social-media-button">
+                    <a href=""
+                        ><img
+                            src="Iconos Redes Sociales/facebook.png"
+                            alt="facebook"
+                            height="15px"
+                    /></a>
+                </div>
+                <div class="social-media-button">
+                    <a href=""
+                        ><img
+                            src="Iconos Redes Sociales/youtube.png"
+                            alt="youtube"
+                            height="15px"
+                    /></a>
+                </div>
+                <div class="social-media-button">
+                    <a href=""
+                        ><img
+                            src="Iconos Redes Sociales/linkedin.png"
+                            alt="linkedin"
+                            height="15px"
+                    /></a>
+                </div>
+            </div>
+        </div>
+        <section class="login">
+            <div class="login-box">
+                <div class="left">
+                    <div class="top-link">
+                        <a href="index.html"
+                            ><img
+                                src="Simbología de Google/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt=""
+                            />Volver al Inicio
+                        </a>
+                    </div>
+                    <div class="access">
+                        <form id="login">
+                            <h3>INICIAR SESIÓN</h3>
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder="USUARIO"
+                                required
+                            />
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="CONTRASEÑA"
+                                required
+                            />
+                            <div class="checkbox">
+                                <input type="checkbox" />
+                                <span>Recordarme</span>
+                            </div>
+                            <div class="submit-box">
+                                <a href="#">¿Olvidaste tu contraseña?</a>
+                                <button
+                                    id="submit"
+                                    type="submit"
+                                    value="ACCEDER"
+                                >
+                                    ACCEDER
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right-text">
+                        <div class="logo">
+                            <img
+                                src="Logos/ITER.png"
+                                alt="ITER"
+                                height="60px"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document
+                .getElementById("login")
+                .addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    var username = document.getElementById("username").value;
+                    console.log(username);
+                    var password = document.getElementById("password").value;
+                    console.log(password);
+
+                    if (username === "lucas" && password === "123") {
+                        var url = "alumno.html?usuario=" + username;
+                        console.log(url);
+                        window.location.href = url;
+                    } else if (
+                        username === "alejandro" &&
+                        password === "12345"
+                    ) {
+                        var url = "docente.html?usuario=" + username;
+                        console.log(url);
+                        window.location.href = url;
+                    } else {
+                        alert("Usuario y/o contraseña inválidos.");
+                    }
+                });
+        </script>
+    </body>
+</html>

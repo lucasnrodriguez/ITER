@@ -1,0 +1,855 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/*TOP-HEADER*/
+.top-header {
+    background-color: rgb(0, 0, 0);
+    height: 5vh;
+    max-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7.5vw;
+}
+
+.contact-top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.contact-top-button a {
+    display: inline-flex;
+}
+.contact-img {
+    filter: invert(66%);
+    margin-right: 10px;
+}
+.contact-top-button:hover {
+    filter: invert();
+}
+.top-header p {
+    font-size: smaller;
+    color: rgb(150, 150, 150);
+    margin-right: 2vw;
+}
+.social-media-container {
+    display: inline-flex;
+}
+.social-media-button img {
+    filter: invert(66%);
+    margin-left: 10px;
+}
+.social-media-button:hover {
+    filter: invert();
+}
+
+/*HEADER*/
+.header-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)),
+        url("Imágenes/adolescentes-haciendo-experimentos-robotica-laboratorio-nino-nina-gafas-protectoras-trabajando-min.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 950px;
+}
+.principal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5vh 0;
+    margin: 0 3vw;
+}
+.logo img {
+    height: clamp(50px, 5vw, 75px);
+    filter: invert(100%);
+}
+.access-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.access-button {
+    background-color: rgb(00, 250, 255);
+    letter-spacing: 1px;
+    padding: 30px;
+    margin: 1px;
+    height: 50px;
+    width: clamp(150px, 30vw, 250px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    transition: 0.15s;
+}
+.access-button:hover {
+    background-color: rgb(0, 201, 204);
+}
+.access-button h2 {
+    font-size: 20px;
+    color: #1e1e1e;
+    line-height: 95%;
+    font-weight: 500;
+}
+.access-button p {
+    font-size: 14px;
+    color: #1e1e1e;
+    line-height: 95%;
+}
+
+/*NAV*/
+#img-nav {
+    display: none;
+}
+#img-nav img {
+    filter: invert();
+}
+#navegation-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#navegation-container ul li {
+    padding: 5px 20px;
+}
+#navegation-container ul li a {
+    color: #e1e1e1;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 15px;
+}
+#navegation-container ul li a:before {
+    content: "";
+    background-color: #e1e1e1;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease; /*EASE: Empieza lento, sigue rápido, termina lento*/
+}
+#navegation-container ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/*REGISTER*/
+#register-header {
+    height: 450px;
+    display: inline-flex;
+    align-items: center;
+    padding: 20px;
+    color: #e1e1e1;
+}
+#register-header h1 {
+    font-size: clamp(0.75rem, 10vh, 1.4rem);
+    font-weight: 400;
+    text-shadow: 0px 3px 6px #00000075;
+}
+#register-header p {
+    font-size: clamp(0.5rem, 10vh, 1rem);
+    font-weight: 300;
+    padding: 25px;
+    text-shadow: 0px 3px 6px #00000075;
+}
+#register-header button {
+    background-color: white;
+    font-size: clamp(0.5rem, 10vh, 1rem);
+    font-family: Montserrat;
+    font-weight: 500;
+    height: 75px;
+    width: 250px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.25s;
+}
+#register-header button:hover {
+    background: #ff6b6b;
+    transform: scale(1.05);
+    transition: 0.25s;
+    box-shadow: 0px 5px 15px 10px #0000001e;
+}
+
+/*MAIN*/
+
+/*BENEFITS*/
+#benefits-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.benefits-bar-box {
+    width: 300px;
+    height: 300px;
+    background: rgb(00, 250, 255);
+    color: #1e1e1e;
+    position: relative;
+    top: -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.benefits-bar-box:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 25%;
+    position: absolute;
+    bottom: -10px;
+    width: 85%;
+    height: 85%;
+    z-index: -1;
+    filter: blur(15px);
+}
+.benefits-bar-box h2 {
+    font-size: 20px;
+    height: 75px;
+    padding: 35px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.benefits-bar-box p {
+    font-size: 14px;
+}
+#benefits-bar img {
+    height: clamp(1rem, 20vw, 3rem);
+}
+
+/*EDUCATION*/
+#education-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.education-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 40vw;
+    min-width: 500px;
+    height: 30vw;
+    min-height: 400px;
+    color: #e1e1e1;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+#box-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url("Imágenes/padre-e-hijo-haciendo-robot-min.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#box-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url("Imágenes/joven-inventora-creando-su-taller-min.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.education-box h1 {
+    font-weight: 600;
+}
+.education-box a {
+    padding: 10% 0;
+}
+.education-box button {
+    background-color: white;
+    font-size: clamp(0.5rem, 10vh, 1rem);
+    font-family: Montserrat;
+    font-weight: 500;
+    height: 50px;
+    width: 200px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.25s;
+}
+.education-box button:hover {
+    background: rgb(00, 250, 255);
+    transform: scale(1.05);
+    transition: 0.25s;
+    box-shadow: 0px 5px 15px 10px #0000001e;
+}
+/*ABOUT-US*/
+#about-us-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 150%;
+    padding: 2vh 0;
+}
+.about-us-text {
+    max-width: 1000px;
+    margin: auto;
+}
+.about-us-text h1 {
+    padding: 5vh;
+}
+.about-us-text p {
+    font-size: clamp(12px, 1vw, 16px);
+}
+.about-us-bar {
+    display: inline-flex;
+    justify-content: center;
+}
+.about-us-box {
+    background: white;
+    color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+    margin: 50px;
+    box-shadow: 0px 5px 15px 5px #1e1e1e1e;
+}
+.about-us-box p {
+    height: 50px;
+    padding: 15px 0;
+}
+.google-item {
+    height: 40px;
+}
+
+/*EDUCATORS*/
+
+#educators-container {
+    background-color: rgb(38, 38, 41);
+    color: #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    line-height: 150%;
+    padding-top: 2vh;
+}
+.educators-text {
+    max-width: 1000px;
+    margin: auto;
+}
+.educators-text h1 {
+    padding: 5vh;
+}
+.educators-text p {
+    font-size: clamp(12px, 1vw, 16px);
+}
+#educators-container h1 {
+    padding: 5vh;
+}
+.educators-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1vh 0 5vh;
+}
+.educators-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 400px;
+    width: 200px;
+    border-radius: 25px;
+    margin: clamp(25px, 2vw, 50px);
+    box-shadow: 0px 5px 10px 1px #0000005d;
+    transition: 0.25s;
+}
+.educators-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px 5px #0000005d;
+    transition: 0.25s;
+}
+.box1 {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url(Personas/emi.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.box2 {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url(Personas/rami.jpg) center center no-repeat;
+    background-size: cover;
+}
+.box3 {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url(Personas/yami.avif) center center no-repeat;
+    background-size: cover;
+}
+.box4 {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url(Personas/fran.avif) center center no-repeat;
+    background-size: cover;
+}
+.box5 {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url(Personas/martu.jpg) center center no-repeat;
+    background-size: cover;
+}
+.box6 {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url(Personas/ale.jpg) center center no-repeat;
+    background-size: cover;
+}
+.educators-box h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+.educators-box p {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+/*GRADUATES*/
+#graduates-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 150%;
+    padding: 3vh 0;
+}
+.graduates-text {
+    max-width: 1000px;
+    margin: auto;
+}
+.graduates-text h1 {
+    padding: 5vh;
+}
+.graduates-text p {
+    font-size: clamp(12px, 1vw, 16px);
+}
+.graduates-bar {
+    display: inline-flex;
+    justify-content: center;
+}
+.graduates-box {
+    background: white;
+    color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 225px;
+    width: 400px;
+    border-radius: 25px;
+    padding: 15px;
+    margin: clamp(25px, 2vw, 50px);
+    box-shadow: 0px 5px 15px 5px #1e1e1e1e;
+    overflow: hidden;
+}
+.graduates-box h3 {
+    padding-top: 15px;
+}
+.graduates-box p {
+    font-size: 12px;
+    height: 50px;
+    padding-top: 5px 0;
+}
+#graduates-container a {
+    margin-bottom: 25px;
+}
+
+/*REGISTER*/
+#register-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url("Imágenes/grupo-adolescentes-haciendo-experimentos-robotica-laboratorio-ninos-ninas-proteccion-vr-min.jpg")
+            center bottom no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.register-box {
+    padding: 20px;
+    color: #e1e1e1;
+}
+.register-box h1 {
+    font-size: clamp(0.75rem, 10vh, 1.4rem);
+    font-weight: 400;
+    text-shadow: 0px 3px 6px #00000075;
+}
+
+.register-box p {
+    font-size: clamp(0.5rem, 10vh, 1rem);
+    font-weight: 300;
+    padding: 25px;
+    text-shadow: 0px 3px 6px #00000075;
+}
+.register-box button {
+    background-color: white;
+    font-size: clamp(0.5rem, 10vh, 1rem);
+    font-family: Montserrat;
+    font-weight: 500;
+    height: 75px;
+    width: 250px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.25s;
+}
+.register-box button:hover {
+    background: #ff6b6b;
+    transform: scale(1.05);
+    transition: 0.25s;
+    box-shadow: 0px 5px 15px 10px #0000001e;
+}
+
+/*NEWS*/
+#news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 3vh 0;
+}
+#news-container h1 {
+    padding: 5vh;
+}
+.news-box {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.news-box article {
+    background: white;
+    color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 225px;
+    width: 400px;
+    border-radius: 25px;
+    padding: 15px;
+    margin: clamp(25px, 2vw, 50px);
+    box-shadow: 0px 5px 15px 5px #1e1e1e1e;
+}
+.news-box h3 {
+    padding-top: 15px;
+}
+.news-box p {
+    font-size: 12px;
+    height: 50px;
+    padding-top: 5px 0;
+}
+
+/*FOOTER*/
+
+/*TOP-FOOTER*/
+.top-footer {
+    background-color: rgb(38, 38, 41);
+    color: rgb(150, 150, 150);
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: start;
+}
+.top-footer p {
+    padding: 8px 0;
+}
+.top-footer h3 {
+    padding: 12px 0;
+}
+.top-footer a:hover {
+    color: #e1e1e1;
+    transition: 0.1s;
+}
+
+/*TOP-FOOTER-CONTAINER*/
+.footer-box-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    padding-top: 2.5vh;
+}
+.footer-box section {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5vh 5vh;
+}
+.footer-box a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(150, 150, 150);
+}
+.footer-social-media {
+    padding: 10px 0;
+}
+.footer-nav {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding: 3vh 2vh;
+}
+.footer-nav a {
+    color: rgb(150, 150, 150);
+    margin: 0 2vw;
+}
+
+/*BOTTOM-FOOTER*/
+.bottom-footer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    min-height: 10vh;
+    background-color: rgb(0, 0, 0);
+    font-size: calc(8px + 0.35vh);
+    color: rgb(150, 150, 150);
+    letter-spacing: 1px;
+}
+.bottom-box {
+    padding: 2vh;
+}
+.bottom-box img {
+    filter: invert(66%);
+}
+.bottom-box img:hover {
+    filter: invert(100%);
+    transition: 0.25s;
+}
+
+/*RESPONSIVE DESIGN*/
+@media screen and (max-width: 1000px) {
+    /*HEADER*/
+    .header-container {
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.9)
+            ),
+            url("Imágenes/adolescentes-haciendo-experimentos-robotica-laboratorio-nino-nina-gafas-protectoras-trabajando-min.jpg");
+    }
+    .top-header img {
+        height: 20px;
+        filter: invert(33%);
+        transition: 0.5s;
+    }
+    .top-header p {
+        display: none;
+    }
+    .principal-container {
+        flex-direction: column;
+    }
+    .logo {
+        margin: 12vh 0;
+    }
+    .access-container {
+        margin: 3vh 0;
+    }
+    .access-button h2 {
+        font-size: 16px;
+    }
+    .access-button p {
+        font-size: 12px;
+    }
+    /*NAV*/
+    #navegation-container {
+        z-index: 1;
+        background-color: #e1e1e1;
+        position: fixed;
+        align-items: left;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        transition: 300ms;
+    }
+    #navegation-container ul {
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 10vh;
+    }
+    #navegation-container ul li {
+        padding: 2.5vh 0;
+    }
+    #navegation-container ul li a {
+        color: #1e1e1e;
+        font-size: 14px;
+    }
+    #back-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+    #img-nav {
+        display: flex;
+        position: absolute;
+        top: 10vh;
+        left: 5vh;
+        background-color: #e1e1e11e;
+        padding: 15px;
+        border-radius: 2px;
+    }
+    #img-nav:active {
+        background-color: #e1e1e110;
+    }
+    #register-header {
+        height: 300px;
+        padding: 20px;
+    }
+
+    /*MAIN*/
+    /*BENEFICIOS*/
+    #benefits-bar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .benefits-bar-box {
+        width: 50%;
+        height: 250px;
+        top: 0;
+        padding: 0 20px;
+    }
+    .benefits-bar-box:before {
+        display: none;
+    }
+    .benefits-bar-box h2 {
+        font-size: 16px;
+    }
+
+    /*EDUCATION*/
+    #education-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .educators-bar {
+        flex-wrap: wrap;
+    }
+    .education-box {
+        width: 100%;
+        height: 400px;
+        min-width: 350px;
+        min-height: 350px;
+    }
+
+    /*ABOUT-US*/
+    .about-us-text {
+        margin: 5vh;
+    }
+    .about-us-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+    .about-us-box {
+        margin: 25px;
+    }
+
+    /*EDUCATORS*/
+    .educators-text {
+        margin: 5vh;
+    }
+    .educators-box {
+        width: 150px;
+        height: 300px;
+    }
+
+    /*GRADUATES*/
+    .graduates-text {
+        margin: 5vh;
+    }
+    .graduates-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+    .graduates-box {
+        margin: 25px;
+        width: 300px;
+    }
+
+    /*NEWS*/
+    .news-box article {
+        margin: 25px;
+        width: 300px;
+    }
+
+    /*FOOTER*/
+    .footer-box-container {
+        flex-direction: column;
+    }
+    .top-footer p {
+        font-size: 14px;
+    }
+    .bottom-footer {
+        grid-template-columns: none;
+        padding: 1vh 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .benefits-bar-box {
+        width: 100%;
+        padding: 0 40px;
+    }
+}
